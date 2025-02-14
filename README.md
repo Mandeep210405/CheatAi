@@ -60,3 +60,5 @@ Want to add new features? Fork it, make your changes, and send a PR. Let’s mak
 
 ### 🚀 Happy Cheating... uh, I mean Learning! 🎓😆
 
+## ohhh yaaa, make sure you have installed ollama  && gemma:2b 
+
