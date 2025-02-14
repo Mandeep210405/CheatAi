@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CheatCode AI</title>
+  <link rel="stylesheet" href="index.css">
+</head>
+<body>
+  <div id="drag-area">Drag Me</div>
+  <div id="content">
+    <div class="component">
+      <h1>CheatCode</h1>
+      <input id="userInput" type="text" placeholder="Enter your query..." />
+      <button onclick="runDeepSeek()">Ask CheatCode</button>
+      <div id="response">Hehe Cheater..</div>
+    </div>
+  </div>
+
+  <script>
+    const { ipcRenderer } = require('electron');
+  
+    function runDeepSeek() {
+      const userInput = document.getElementById('userInput').value;
+      const responseElement = document.getElementById('response');
+      responseElement.innerText = 'Processing...';
+  
+      ipcRenderer.send('run-deepseek', userInput);
+  
+      ipcRenderer.removeAllListeners('deepseek-response-chunk');
+      ipcRenderer.removeAllListeners('deepseek-response-end');
+  
+      //  Stream responses in real-time
+      ipcRenderer.on('deepseek-response-chunk', (event, chunk) => {
+        responseElement.innerText += chunk;
+        responseElement.scrollTop = responseElement.scrollHeight;
+      });
+  
+      // end 
+      ipcRenderer.on('deepseek-response-end', () => {
+        responseElement.innerText += '\n\nDone!';
+      });
+    }
+  </script>
+</body>
+</html>

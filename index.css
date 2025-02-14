@@ -1,0 +1,90 @@
+body {
+    margin: 0;
+    padding: 0;
+    background: transparent;
+    color: white;
+    font-family: Arial, sans-serif;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    height: 100vh;
+  }
+
+  #drag-area {
+-webkit-app-region: drag;
+height: 40px;
+width: 80%; 
+max-width: 800px;
+background-color: rgba(0, 0, 0, 1);
+display: flex;
+align-items: center;
+justify-content: center;
+font-size: 16px;
+position: fixed;
+top: 0;
+left: 50%;
+transform: translateX(-50%);
+border-radius: 10px 10px 0 0;
+box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+}
+  #content {
+    padding: 20px;
+    width: 80%;
+    max-width: 800px;
+    background-color: rgba(0, 0, 0, 0.7);
+    border-radius: 10px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+  }
+  .component {
+    margin: 10px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.1);
+    border-radius: 10px;
+  }
+  h1 {
+    margin-top: 0;
+    font-size: 24px;
+  }
+  input {
+    padding: 10px;
+    width: calc(100% - 22px);
+    margin-bottom: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: rgba(255, 255, 255, 0.2);
+    color: white;
+  }
+  button {
+    padding: 10px 20px;
+    background-color: rgba(0, 123, 255, 0.8);
+    border: none;
+    border-radius: 5px;
+    color: white;
+    cursor: pointer;
+    width: 100%;
+  }
+  button:hover {
+    background-color: rgba(0, 123, 255, 1);
+  }
+  #response {
+    margin-top: 10px;
+    padding: 10px;
+    background: rgba(255, 255, 255, 0.1);
+    border-radius: 5px;
+    max-height: 300px;
+    overflow-y: auto;
+    white-space: pre-wrap;
+  }
+
+  #startListeningBtn, #stopListeningBtn {
+    margin-top: 10px;
+    padding: 5px 10px;
+    font-size: 14px;
+    cursor: pointer;
+  }
+  
+  #stopListeningBtn {
+    background-color: #ff4444;
+    color: white;
+  }
