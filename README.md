@@ -1,4 +1,4 @@
-#CheatCode AI 🤖💻
+# CheatCode AI 🤖💻
 
 Ever wished you had a cheat code for life? Well, we can’t help with that... but we can help you ace virtual interviews, generate answers like a pro, and look like the smartest person in the (virtual) room! 🎩✨
 
